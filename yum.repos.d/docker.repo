@@ -1,0 +1,5 @@
+[docker-repo]
+name=Docker Repository
+baseurl=https://docker-yum-repo-ssl/
+enabled=1
+gpgcheck=0

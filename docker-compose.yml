@@ -1,0 +1,20 @@
+version: '2.1'
+#sudo docker-compose rm -f || true && sudo docker volume rm -f $(sudo docker volume ls -q) || true &&  cd ../../mongodb-tomcat-session-manager/ && mvn -Psource-and-doc clean install -DskipITs && cd ../spring-security-hello-world-example && mvn clean install -DskipITs && cd docker-test && reset && sudo docker-compose up
+services:
+  docker-yum-repo-ssl:
+    image: vincentrussell/docker-yum-repo-ssl
+    hostname: docker-yum-repo-ssl
+    container_name: docker-yum-repo-ssl
+    ports:
+      - 8443:443
+    volumes:
+      - ./cert/cert.pem:/cert/cert.pem
+      - ./cert/key.pem:/cert/cert.key
+      - ./repo:/repo
+  centos7:
+    image:  centos/httpd-24-centos7
+    hostname: centos7
+    container_name: centos7
+    volumes:
+      - ./yum.repos.d/:/etc/yum.repos.d/
+      - ./yum.conf:/etc/yum.conf
