@@ -8,13 +8,13 @@ services:
     ports:
       - 8443:443
     volumes:
-      - ./cert/cert.pem:/cert/cert.pem
-      - ./cert/key.pem:/cert/cert.key
-      - ./repo:/repo
+      - ./cert/cert.pem:/cert/cert.pem:z
+      - ./cert/key.pem:/cert/cert.key:z
+      - ./repo:/repo:z
   centos7:
     image:  centos/httpd-24-centos7
     hostname: centos7
     container_name: centos7
     volumes:
-      - ./yum.repos.d/:/etc/yum.repos.d/
-      - ./yum.conf:/etc/yum.conf
+      - ./yum.repos.d/:/etc/yum.repos.d/:z
+      - ./yum.conf:/etc/yum.conf:z
