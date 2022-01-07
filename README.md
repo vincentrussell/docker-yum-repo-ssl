@@ -43,8 +43,23 @@ This image was based on [dgutierrez1287/yum-repo:2.0.0](https://hub.docker.com/r
 docker run -d -p 8443:443 -v /path/to/cert/cert.pem:/cert/cert.pem -v /path/to/cert/key.pem:/cert/cert.key -v /opt/repo:/repo vincentrussell/docker-yum-repo-ssl
 ```	
 
-## ChangeLog
 
-Version: 1.0.0, 2020-01-01
+# Change Log
 
-Initial Release
+## [1.0.0](https://github.com/vincentrussell/docker-yum-repo-ssl/tree/1.0.0) (2020-01-01)
+
+**Enhancements:**
+
+- Initial Release
+
+## [1.1.0](https://github.com/vincentrussell/docker-yum-repo-ssl/tree/1.1.0) (2020-05-20)
+
+**Bugs:**
+
+- fix bug where docker container couldn't be restarted
+
+## [1.2.0](https://github.com/vincentrussell/docker-yum-repo-ssl/tree/1.2.0) (2022-01-07)
+
+**Bugs:**
+
+- upgrade nginx to nginx/1.20.2
