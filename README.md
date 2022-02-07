@@ -46,11 +46,18 @@ docker run -d -p 8443:443 -v /path/to/cert/cert.pem:/cert/cert.pem -v /path/to/c
 
 # Change Log
 
-## [1.0.0](https://github.com/vincentrussell/docker-yum-repo-ssl/tree/1.0.0) (2020-01-01)
+## [1.2.1](https://github.com/vincentrussell/docker-yum-repo-ssl/tree/1.2.1) (2022-02-07)
 
-**Enhancements:**
+**Bugs:**
 
-- Initial Release
+- upgrade cipher suites
+
+## [1.2.0](https://github.com/vincentrussell/docker-yum-repo-ssl/tree/1.2.0) (2022-01-07)
+
+**Bugs:**
+
+- upgrade nginx to nginx/1.20.2
+
 
 ## [1.1.0](https://github.com/vincentrussell/docker-yum-repo-ssl/tree/1.1.0) (2020-05-20)
 
@@ -58,8 +65,10 @@ docker run -d -p 8443:443 -v /path/to/cert/cert.pem:/cert/cert.pem -v /path/to/c
 
 - fix bug where docker container couldn't be restarted
 
-## [1.2.0](https://github.com/vincentrussell/docker-yum-repo-ssl/tree/1.2.0) (2022-01-07)
+## [1.0.0](https://github.com/vincentrussell/docker-yum-repo-ssl/tree/1.0.0) (2020-01-01)
 
-**Bugs:**
+**Enhancements:**
 
-- upgrade nginx to nginx/1.20.2
+- Initial Release
+
+
